@@ -1,0 +1,228 @@
+:root {
+  --main-font: 'Lato', sans-serif;
+  --main-color: #f2f2f2;
+}
+
+$brown: #59331D;
+$blue: #082B59;
+$peach: #fcd0b8;
+
+html {
+  box-sizing: border-box;
+}
+*, 
+*::before, 
+*::after {
+  box-sizing: inherit;
+}
+
+@mixin responsive-image($width-small, $width-medium, $width-large) {
+  width: $width-small;
+
+@media screen and (min-width: 768px) {
+  width: $width-medium;
+}
+
+@media screen and (min-width: 1024px) {
+  width: $width-large;
+}
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+  @include responsive-image(100%, 50%, 25%);
+}
+
+header{
+    background-color: $blue;
+    height:235px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+  }
+  menu {
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 1.5rem;
+  }
+  h2 {
+    margin: 0;
+    height: 20px;
+    background-color: #d98555;
+  }
+  .list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+    gap: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: var(--main-font);
+  }
+  article {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem;
+    margin-bottom: 3rem;
+  }
+  p{
+    margin: 1em;
+    font-family: var(--main-font);
+    font-size: 16px;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 2em;
+    line-height: 2em;
+    letter-spacing: .02em;
+  }
+  h1 {
+    font-family: 'Poppins' , sans-serif;
+    margin-left: 0.5em;
+    font-size: 30px;
+  }
+  .button {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: $brown;
+    color: white;
+    margin: 20px 0 20 0;
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--main-font);
+    padding: 22px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    }
+    .button:hover {
+      color: complement($peach);
+    }
+  a {
+    color: $brown;
+    margin-left: .2rem;
+    margin-right: .2rem;
+  }
+  figcaption {
+    background-color: $brown;
+    color: var(--main-color);
+    text-decoration: none;
+    font-family: var(--main-font);
+    display: block;
+    padding: 1rem;
+    padding-top: 1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  figure {
+    background-color: $brown;
+    display: block;
+    border-radius: 10px;
+    max-width: 100%;
+  }
+  img {
+    width: 255px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 100%;
+  }
+  footer {
+    background-color: $blue;
+    height: 130px;
+    color: var(--main-color);
+    text-align: center;
+    font-family: var(--main-font);
+    letter-spacing: .1rem;
+  }
+  footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  h3 {
+    background-color: #d98555;
+    height: 20px;
+  }
+  nav a {
+    color: #f2f2f2;
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    &:hover {
+    color: complement($peach);
+    }
+  }
+
+  .fa-brands {
+    color: var(--main-color);
+    padding: 1.5rem;
+    font-size: 25px;
+  }
+  .fa-brands:hover {
+      color: complement($peach);
+    }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-family: var(--main-font);
+  }
+  .grid-item {
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-family: lato, sans-serif;
+    height: 400px;
+    width: 350px;
+  }
+  .contact-menu {
+    list-style-type: none;
+    font-family: var(--main-font);
+    padding: 20px;
+  }
+  section {
+    margin: 1rem;
+  }
+  .prodcontainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #FFFFFF;
+    font-family: var(--main-font);
+  }
+  .card {
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-family: var(--main-font);
+    height: 400px;
+    width: 350px;
+    justify-content: stretch;
+  }
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+  .background {
+    width: 100%;
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../media/images/gulp-bottom-beans.jpg)
+  } 
+  picture {
+    max-width: 100%;
+  }
