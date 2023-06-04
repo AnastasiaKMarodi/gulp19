@@ -63,7 +63,7 @@ h2 {
   list-style: none;
   justify-content: center;
   gap: 50px;
-  color: white;
+  color: var(--main-color);
   font-size: 20px;
   font-family: var(--main-font);
 }
@@ -96,7 +96,7 @@ h1 {
   display: inline-block;
   border-radius: 10px;
   background-color: #59331D;
-  color: white;
+  color: #ffffff;
   margin: 20px 0 20 0;
   text-align: center;
   font-size: 18px;
@@ -165,7 +165,7 @@ h3 {
 }
 
 nav a {
-  color: #f2f2f2;
+  color: var(--main-color);
   display: block;
   padding: 0.5rem;
   text-decoration: none;
@@ -184,24 +184,6 @@ nav a:hover {
   color: #b8e4fc;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #FFFFFF;
-  padding: 10px;
-  font-family: var(--main-font);
-}
-
-.grid-item {
-  background-color: #FFFFFF;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
-  font-family: lato, sans-serif;
-  height: 400px;
-  width: 350px;
-}
-
 .contact-menu {
   list-style-type: none;
   font-family: var(--main-font);
@@ -215,12 +197,12 @@ section {
 .prodcontainer {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-family: var(--main-font);
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 10px;
   font-size: 30px;
   text-align: center;

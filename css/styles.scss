@@ -1,11 +1,15 @@
+// variable font & main color
 :root {
   --main-font: 'Lato', sans-serif;
   --main-color: #f2f2f2;
 }
 
+// variable colors
 $brown: #59331D;
 $blue: #082B59;
 $peach: #fcd0b8;
+$orange: #d98555;
+$white: #ffffff;
 
 html {
   box-sizing: border-box;
@@ -16,6 +20,7 @@ html {
   box-sizing: inherit;
 }
 
+// media queries
 @mixin responsive-image($width-small, $width-medium, $width-large) {
   width: $width-small;
 
@@ -34,6 +39,7 @@ img {
   @include responsive-image(100%, 50%, 25%);
 }
 
+// header components
 header{
     background-color: $blue;
     height:235px;
@@ -55,8 +61,9 @@ header{
   h2 {
     margin: 0;
     height: 20px;
-    background-color: #d98555;
+    background-color: $orange;
   }
+  
   .list {
     display: flex;
     padding: 0;
@@ -64,7 +71,7 @@ header{
     list-style: none;
     justify-content: center;
     gap: 50px;
-    color: white;
+    color: var(--main-color);
     font-size: 20px;
     font-family: var(--main-font);
   }
@@ -93,7 +100,7 @@ header{
     display: inline-block;
     border-radius: 10px;
     background-color: $brown;
-    color: white;
+    color: $white;
     margin: 20px 0 20 0;
     text-align: center;
     font-size: 18px;
@@ -135,6 +142,7 @@ header{
     border-top-right-radius: 10px;
     max-width: 100%;
   }
+  // footer 
   footer {
     background-color: $blue;
     height: 130px;
@@ -149,11 +157,12 @@ header{
     justify-content: center;
   }
   h3 {
-    background-color: #d98555;
+    background-color: $orange;
     height: 20px;
   }
+
   nav a {
-    color: #f2f2f2;
+    color: var(--main-color);
     display: block;
     padding: 0.5rem;
     text-decoration: none;
@@ -161,7 +170,7 @@ header{
     color: complement($peach);
     }
   }
-
+// footer icons & links
   .fa-brands {
     color: var(--main-color);
     padding: 1.5rem;
@@ -171,22 +180,6 @@ header{
       color: complement($peach);
     }
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #FFFFFF;
-    padding: 10px;
-    font-family: var(--main-font);
-  }
-  .grid-item {
-    background-color: #FFFFFF;
-    padding: 10px;
-    font-size: 30px;
-    text-align: center;
-    font-family: lato, sans-serif;
-    height: 400px;
-    width: 350px;
-  }
   .contact-menu {
     list-style-type: none;
     font-family: var(--main-font);
@@ -195,14 +188,16 @@ header{
   section {
     margin: 1rem;
   }
+  
+  // 'products' page grid container 
   .prodcontainer {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: #FFFFFF;
+    background-color: $white;
     font-family: var(--main-font);
   }
   .card {
-    background-color: #FFFFFF;
+    background-color: $white;
     padding: 10px;
     font-size: 30px;
     text-align: center;
@@ -211,6 +206,7 @@ header{
     width: 350px;
     justify-content: stretch;
   }
+  // body layout & background
   body {
     margin: 0px;
     padding: 0px;
